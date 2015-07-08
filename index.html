@@ -169,6 +169,10 @@
 				top: 20px;
 				background: #dddddd;
 			}
+			
+			.open-sub {
+				display:block !important;
+			}
 		</style>
 
 	</head>
@@ -188,13 +192,14 @@
 						<span class="icon icon-close">Close the overlay</span>
 						<div id='cssmenu'>
 							<ul>
+								<li><a href="#" id="expand-menu">Expand Menu Links</a></li>
 								<li>
 									<a href='#'>Users &amp; Roles</a>
 								</li>
 
 								<li class='has-sub'>
 									<a href='#'>Content</a>
-									<ul>
+									<ul class='sub-menu'>
 										<li class="heading">
 											Browse
 										</li>
@@ -251,7 +256,7 @@
 
 								<li class='has-sub'>
 									<a href='#'>Settings</a>
-									<ul>
+									<ul class='sub-menu'>
 										<li class="heading">
 											Apps
 										</li>
@@ -271,7 +276,7 @@
 								</li>
 								<li class='has-sub'>
 									<a href='#'>Appearance</a>
-									<ul>
+									<ul class='sub-menu'>
 										<li>
 											<a href='#'>Themes</a>
 										</li>
@@ -389,6 +394,24 @@
 					element.siblings('li').find('ul').slideUp(200);
 				}
 			});
+			
+			
+		</script>
+		
+		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script>
+		//TOGGLE THE MENU OPEN
+			$(document).ready(function() {
+   
+$('#expand-menu').click(function() {
+  $('.has-sub').toggleClass('open');
+  $('.sub-menu').toggleClass('open-sub');
+  //$('.sub-menu').css("display", "block");
+  
+  
+  
+});
+		});	
 		</script>
 	</body>
 </html>
