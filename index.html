@@ -171,7 +171,7 @@
 			}
 			
 			.open-sub {
-				display:block !important;
+				display:block;
 			}
 		</style>
 
@@ -192,10 +192,8 @@
 						<span class="icon icon-close">Close the overlay</span>
 						<div id='cssmenu'>
 							<ul>
-								<li><a href="#" id="expand-menu">Expand Menu Links</a></li>
-								<li>
-									<a href='#'>Users &amp; Roles</a>
-								</li>
+								<li><a href="#" id="expand-menu">Expand All</a></li>
+								
 
 								<li class='has-sub'>
 									<a href='#'>Content</a>
@@ -254,6 +252,21 @@
 									</ul>
 								</li>
 
+								
+								<li class='has-sub'>
+									<a href='#'>Appearance</a>
+									<ul class='sub-menu'>
+										<li>
+											<a href='#'>Themes</a>
+										</li>
+										<li>
+											<a href='#'>Layout</a>
+										</li>
+										<li>
+											<a href='#'>Theme Settings</a>
+										</li>
+									</ul>
+								</li>
 								<li class='has-sub'>
 									<a href='#'>Settings</a>
 									<ul class='sub-menu'>
@@ -274,23 +287,22 @@
 										</li>
 									</ul>
 								</li>
+								<li>
+									<a href='#'>Users &amp; Roles</a>
+								</li>
 								<li class='has-sub'>
-									<a href='#'>Appearance</a>
+									<a href='#'>Help</a>
 									<ul class='sub-menu'>
 										<li>
-											<a href='#'>Themes</a>
+											<a href='#'>Support</a>
 										</li>
 										<li>
-											<a href='#'>Layout</a>
+											<a href='#'>Documentation</a>
 										</li>
-										<li>
-											<a href='#'>Theme Settings</a>
-										</li>
+									
 									</ul>
 								</li>
-								<li>
-									<a href='#'>Contact</a>
-								</li>
+								
 							</ul>
 
 						</div>
@@ -395,6 +407,11 @@
 				}
 			});
 			
+			//$(document).ready(function(){
+   // $(".flip").click(function(){
+     //   $(this).parent().next(".panel").slideToggle("slow");
+    // });
+//});
 			
 		</script>
 		
@@ -405,8 +422,8 @@
    
 $('#expand-menu').click(function() {
   $('.has-sub').toggleClass('open');
-  $('.sub-menu').toggleClass('open-sub');
-  //$('.sub-menu').css("display", "block");
+  //$('.sub-menu').toggleClass('open-sub');
+  $('.sub-menu').css("display", "block");
   
   
   
