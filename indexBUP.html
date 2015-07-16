@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js demo-7">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Morphing Buttons Concept | Demo 7</title>
+
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/content.css" />
+		<style>
+			@import url(https://fonts.googleapis.com/css?family=Raleway:400,200);
+
+			/* http://meyerweb.com/eric/tools/css/reset/
+			 v2.0 | 20110126
+			 License: none (public domain)
+			 */
+
+			html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+			/* HTML5 display-role reset for older browsers */
+			article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+				display: block;
+			}
+			body {
+				line-height: 1;
+			}
+			ol, ul {
+				list-style: none;
+			}
+			blockquote, q {
+				quotes: none;
+			}
+			blockquote:before, blockquote:after, q:before, q:after {
+				content: '';
+				content: none;
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+			/* CSS RESET END */
+
+			.morph-button-sidebar .morph-content {
+				background: #0c6da1;
+			}
+
+			.morph-button > button {
+
+				background-color: #2E769C;
+			}
+
+			#cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				list-style: none;
+				line-height: 1;
+				display: block;
+				position: relative;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			#cssmenu {
+				font-family: Raleway, sans-serif;
+				color: #ffffff;
+			}
+			#cssmenu ul ul {
+				display: none;
+			}
+			#cssmenu > ul > li.active > ul {
+				display: block;
+			}
+			.align-right {
+				float: right;
+			}
+			#cssmenu > ul > li > a {
+				padding: 16px 22px;
+				cursor: pointer;
+				z-index: 2;
+				font-size: 16px;
+				text-decoration: none;
+				color: #ffffff;
+				background: #2E769C;
+				-webkit-transition: color .2s ease;
+				-o-transition: color .2s ease;
+				transition: color .2s ease;
+			}
+			#cssmenu > ul > li > a:hover {
+				color: #d8f3f0;
+			}
+			#cssmenu ul > li.has-sub > a:after {
+				position: absolute;
+				right: 26px;
+				top: 19px;
+				z-index: 5;
+				display: block;
+				height: 10px;
+				width: 2px;
+				background: #ffffff;
+				content: "";
+				-webkit-transition: all 0.1s ease-out;
+				-moz-transition: all 0.1s ease-out;
+				-ms-transition: all 0.1s ease-out;
+				-o-transition: all 0.1s ease-out;
+				transition: all 0.1s ease-out;
+			}
+			#cssmenu ul > li.has-sub > a:before {
+				position: absolute;
+				right: 22px;
+				top: 23px;
+				display: block;
+				width: 10px;
+				height: 2px;
+				background: #ffffff;
+				content: "";
+				-webkit-transition: all 0.1s ease-out;
+				-moz-transition: all 0.1s ease-out;
+				-ms-transition: all 0.1s ease-out;
+				-o-transition: all 0.1s ease-out;
+				transition: all 0.1s ease-out;
+			}
+			#cssmenu ul > li.has-sub.open > a:after, #cssmenu ul > li.has-sub.open > a:before {
+				-webkit-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+				transform: rotate(45deg);
+			}
+			#cssmenu ul ul li a, #cssmenu .heading {
+				padding: 14px 22px 14px 32px;
+				cursor: pointer;
+				z-index: 2;
+				font-size: 14px;
+				text-decoration: none;
+				color: #dddddd;
+				background: #49505a;
+				-webkit-transition: color .2s ease;
+				-o-transition: color .2s ease;
+				transition: color .2s ease;
+			}
+
+			#cssmenu .heading {
+				padding: 14px 22px;
+				background: #444;
+			}
+
+			#cssmenu ul ul ul li a {
+				padding-left: 32px;
+			}
+			#cssmenu ul ul li a:hover {
+				color: #ffffff;
+			}
+			#cssmenu ul ul > li.has-sub > a:after {
+				top: 16px;
+				right: 26px;
+				background: #dddddd;
+			}
+			#cssmenu ul ul > li.has-sub > a:before {
+				top: 20px;
+				background: #dddddd;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id="container" class="container">
+			<!-- Top Navigation -->
+			<iframe src="https://sociology.fas.harvard.edu/" width="100%" height="2000px"></iframe>
+
+		</div><!-- /container -->
+		<div class="morph-button morph-button-sidebar morph-button-fixed">
+			<button type="button">
+				<span class="icon icon-cog">Settings Menu</span>
+			</button>
+			<div class="morph-content">
+				<div>
+					<div class="content-style-sidebar">
+						<span class="icon icon-close">Close the overlay</span>
+						<div id='cssmenu'>
+							<ul>
+								<li>
+									<a href='#'>Users &amp; Roles</a>
+								</li>
+
+								<li class='has-sub'>
+									<a href='#'>Content</a>
+									<ul>
+										<li class="heading">
+											Browse
+										</li>
+										<li>
+											<a href='#'>Pages</a>
+										</li>
+										<li>
+											<a href='#'>Files</a>
+										</li>
+										<li>
+											<a href='#'>Widgets</a>
+										</li>
+										<li>
+											<a href='#'>Tagging</a>
+										</li>
+
+										<li class="heading">
+											Add
+										</li>
+										<li>
+											<a href='#'>Page</a>
+										</li>
+										<li>
+											<a href='#'>ContentType 2</a>
+										</li>
+										<li>
+											<a href='#'>ContentType 3</a>
+										</li>
+										<li>
+											<a href='#'>ContentType N</a>
+										</li>
+										<li>
+											<a href='#'>Add More +</a>
+										</li>
+
+										<li class="heading">
+											Import
+										</li>
+										<li>
+											<a href='#'>Page</a>
+										</li>
+										<li>
+											<a href='#'>ContentType 2</a>
+										</li>
+										<li>
+											<a href='#'>ContentType 3</a>
+										</li>
+										<li>
+											<a href='#'>ContentType N</a>
+										</li>
+
+									</ul>
+								</li>
+
+								<li class='has-sub'>
+									<a href='#'>Settings</a>
+									<ul>
+										<li class="heading">
+											Apps
+										</li>
+										<li>
+											<a href='#'>Browse</a>
+										</li>
+										<li>
+											<a href='#'>Publication Settings</a>
+										</li>
+										<li>
+											<a href='#'>ContentType N</a>
+										</li>
+										<li>
+											<a href='#'>Advanced</a>
+										</li>
+									</ul>
+								</li>
+								<li class='has-sub'>
+									<a href='#'>Appearance</a>
+									<ul>
+										<li>
+											<a href='#'>Themes</a>
+										</li>
+										<li>
+											<a href='#'>Layout</a>
+										</li>
+										<li>
+											<a href='#'>Theme Settings</a>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<a href='#'>Contact</a>
+								</li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- morph-button -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="application/javascript" src="js/modernizr.custom.js"></script>
+		<script type="application/javascript" src="js/classie.js"></script>
+		<script type="application/javascript" src="js/uiMorphingButton_fixed.js"></script>
+		<script>
+			(function() {
+				var docElem = window.document.documentElement, didScroll, scrollPosition, container = document.getElementById('container');
+
+				// trick to prevent scrolling when opening/closing button
+				function noScrollFn() {
+					window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0);
+				}
+
+				function noScroll() {
+					window.removeEventListener('scroll', scrollHandler);
+					window.addEventListener('scroll', noScrollFn);
+				}
+
+				function scrollFn() {
+					window.addEventListener('scroll', scrollHandler);
+				}
+
+				function canScroll() {
+					window.removeEventListener('scroll', noScrollFn);
+					scrollFn();
+				}
+
+				function scrollHandler() {
+					if (!didScroll) {
+						didScroll = true;
+						setTimeout(function() {
+							scrollPage();
+						}, 60);
+					}
+				};
+
+				function scrollPage() {
+					scrollPosition = {
+						x : window.pageXOffset || docElem.scrollLeft,
+						y : window.pageYOffset || docElem.scrollTop
+					};
+					didScroll = false;
+				};
+
+				scrollFn();
+
+				var el = document.querySelector('.morph-button');
+
+				new UIMorphingButton(el, {
+					closeEl : '.icon-close',
+					onBeforeOpen : function() {
+						// don't allow to scroll
+						noScroll();
+						// push main container
+						classie.addClass(container, 'pushed');
+					},
+					onAfterOpen : function() {
+						// can scroll again
+						canScroll();
+						// add scroll class to main el
+						classie.addClass(el, 'scroll');
+					},
+					onBeforeClose : function() {
+						// remove scroll class from main el
+						classie.removeClass(el, 'scroll');
+						// don't allow to scroll
+						noScroll();
+						// push back main container
+						classie.removeClass(container, 'pushed');
+					},
+					onAfterClose : function() {
+						// can scroll again
+						canScroll();
+					}
+				});
+			})();
+		</script>
+
+		<script type="application/javascript" >
+			$('#cssmenu li.active').addClass('open').children('ul').show();
+			$('#cssmenu li.has-sub > a').on('click', function() {
+				$(this).removeAttr('href');
+				var element = $(this).parent('li');
+				if (element.hasClass('open')) {
+					element.removeClass('open');
+					element.find('li').removeClass('open');
+					element.find('ul').slideUp(200);
+				} else {
+					element.addClass('open');
+					element.children('ul').slideDown(200);
+					element.siblings('li').children('ul').slideUp(200);
+					element.siblings('li').removeClass('open');
+					element.siblings('li').find('li').removeClass('open');
+					element.siblings('li').find('ul').slideUp(200);
+				}
+			});
+		</script>
+	</body>
+</html>
