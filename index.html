@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js demo-7">
+<html lang="en" class="no-js">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Morphing Buttons Concept | Demo 7</title>
 
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<link rel="stylesheet" type="text/css" href="css/content.css" />
 		<style>
@@ -50,14 +48,53 @@
 			/* CSS RESET END */
 
 			.morph-button-sidebar .morph-content {
-				background: #0c6da1;
+				background: #111;
 			}
 
 			.morph-button > button {
 
-				background-color: #2E769C;
+				background-color: #111;
 			}
 
+			*, *:after, *:before {
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			.clearfix:before, .clearfix:after {
+				content: '';
+				display: table;
+			}
+			.clearfix:after {
+				clear: both;
+			}
+
+			html, body {
+				overflow-x: hidden;
+				height: 100%;
+				position: relative;
+			}
+
+			.container {
+				width: 100%;
+				position: absolute;
+				-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
+				transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
+			}
+
+			.no-js .container {
+				width: calc(100% - 300px);
+				right: 0;
+			}
+
+			.pushed.container {
+				-webkit-transition-duration: 0.5s;
+				transition-duration: 0.5s;
+				-webkit-transform: translateX(225px);
+				transform: translateX(225px);
+			}
+
+			/* MENU SPECIFIC */
 			#cssmenu, #cssmenu ul, #cssmenu ul li, #cssmenu ul li a {
 				margin: 0;
 				padding: 0;
@@ -73,6 +110,7 @@
 			#cssmenu {
 				font-family: Raleway, sans-serif;
 				color: #ffffff;
+				margin-top: 25px;
 			}
 			#cssmenu ul ul {
 				display: none;
@@ -90,13 +128,13 @@
 				font-size: 16px;
 				text-decoration: none;
 				color: #ffffff;
-				background: #2E769C;
+				background: #6C7A89;
 				-webkit-transition: color .2s ease;
 				-o-transition: color .2s ease;
 				transition: color .2s ease;
 			}
 			#cssmenu > ul > li > a:hover {
-				color: #d8f3f0;
+				color: #CCC;
 			}
 			#cssmenu ul > li.has-sub > a:after {
 				position: absolute;
@@ -130,12 +168,19 @@
 				transition: all 0.1s ease-out;
 			}
 			#cssmenu ul > li.has-sub.open > a:after, #cssmenu ul > li.has-sub.open > a:before {
-				-webkit-transform: rotate(45deg);
-				-moz-transform: rotate(45deg);
-				-ms-transform: rotate(45deg);
-				-o-transform: rotate(45deg);
-				transform: rotate(45deg);
+				-webkit-transform: rotate(180deg);
+				-moz-transform: rotate(180deg);
+				-ms-transform: rotate(180deg);
+				-o-transform: rotate(180deg);
+				transform: rotate(180deg);
+				height: 2px;
+				width: 10px;
 			}
+
+			#cssmenu ul > li.has-sub.open > a:after {
+				content: none;
+			}
+
 			#cssmenu ul ul li a, #cssmenu .heading {
 				padding: 14px 22px 14px 32px;
 				cursor: pointer;
@@ -170,9 +215,32 @@
 				background: #dddddd;
 			}
 			
-			.open-sub {
+			/* Modals */
+			.modal {
+				position:absolute;
+				left:225px;
+				top:42px;
+				border:3px solid #8E8E8B;
+				background:#FFF;
+				display:none;
+			}
+			.modal.show {
 				display:block;
 			}
+			
+			.modal-heading {
+				position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 35px;
+  background: #313338;
+  color: #FFF;
+  font-family: Raleway, sans-serif;
+  padding: 9px;
+			}
+
 		</style>
 
 	</head>
@@ -189,11 +257,12 @@
 			<div class="morph-content">
 				<div>
 					<div class="content-style-sidebar">
-						<span class="icon icon-close">Close the overlay</span>
+						<span class="icon icon-close">&#171; Close</span>
 						<div id='cssmenu'>
 							<ul>
-								<li><a href="#" id="expand-menu">Expand All</a></li>
-								
+								<li>
+									&nbsp;
+								</li>
 
 								<li class='has-sub'>
 									<a href='#'>Content</a>
@@ -252,15 +321,14 @@
 									</ul>
 								</li>
 
-								
 								<li class='has-sub'>
 									<a href='#'>Appearance</a>
 									<ul class='sub-menu'>
 										<li>
-											<a href='#'>Themes</a>
+											<a href='#' class='themes'>Themes</a>
 										</li>
 										<li>
-											<a href='#'>Layout</a>
+											<a href='#' class='layout'>Layout</a>
 										</li>
 										<li>
 											<a href='#'>Theme Settings</a>
@@ -274,7 +342,7 @@
 											Apps
 										</li>
 										<li>
-											<a href='#'>Browse</a>
+											<a href='#' class='apps'>Browse</a>
 										</li>
 										<li>
 											<a href='#'>Publication Settings</a>
@@ -299,10 +367,10 @@
 										<li>
 											<a href='#'>Documentation</a>
 										</li>
-									
+
 									</ul>
 								</li>
-								
+
 							</ul>
 
 						</div>
@@ -407,28 +475,45 @@
 				}
 			});
 			
-			//$(document).ready(function(){
-   // $(".flip").click(function(){
-     //   $(this).parent().next(".panel").slideToggle("slow");
-    // });
-//});
 			
+			$('a.apps').click(function () {
+               $('.apps-modal').toggleClass('show');
+            });
+            
+            
+            $('a.themes').click(function () {
+               $('.appearance-modal').toggleClass('show');
+            });
+            
+            $('a.layout').click(function () {
+               $('.layout-modal').toggleClass('show');
+            });
+            
+            //$('a.close-modal').click(function () {
+              // $('.apps-modal').removeClass('show');
+           // });
+			
+
 		</script>
 		
-		<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-		<script>
-		//TOGGLE THE MENU OPEN
-			$(document).ready(function() {
-   
-$('#expand-menu').click(function() {
-  $('.has-sub').toggleClass('open');
-  //$('.sub-menu').toggleClass('open-sub');
-  $('.sub-menu').css("display", "block");
-  
-  
-  
-});
-		});	
-		</script>
+		<div class="modal apps-modal">
+			<div class="modal-heading">Apps Here</div>
+			<img src="img/screens/modal-apps-fw.png">
+		</div>
+		
+		<div class="modal appearance-modal">
+			<div class="modal-heading">Themes</div>
+			<img src="img/screens/modal-appearance.png">
+		</div>
+		
+		
+		<div class="modal layout-modal">
+			<div class="modal-heading">Layout</div>
+			<img src="img/screens/modal-layout.png">
+		</div>
+		
+		
+		
+
 	</body>
 </html>
