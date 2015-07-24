@@ -241,14 +241,81 @@
   padding: 9px;
 			}
 
+			.topRight_Menu {
+				position: fixed;
+				top:0;
+				right:0;
+				padding:10px;
+				margin-right:20px;
+				color:white;
+				background:black;
+				z-index: 10;
+				width:160px;
+				display: inline-block;
+				font-family: Raleway, sans-serif;
+				font-size: 14px;
+			}
+
+			.topRight_subMenu {
+				margin-top:25px;
+				font-size: 12px;
+
+			}
+
+			.arrow-down {
+				width: 0; 
+				height: 0; 
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;				
+				border-top: 10px solid #fff;
+				z-index: 10;
+				position: fixed;
+				display: inline-block;
+				margin-left:5px;
+				margin-top:3px;
+			}
+			li {
+				margin: 0.5em 0;
+			}
+			.li_separtor {
+				content: "";
+				display: block;
+				height: 1px;
+				width: 100%;
+				margin-top: 8px;
+				margin-bottom: 5px;
+				background: #fff;
+			}
+			a { 
+				cursor: pointer; 
+				color: #fff;
+				text-decoration: none;
+			}
+
 		</style>
 
 	</head>
-	<body>
+	<body height="3000px">
+		<div id="topRightMenu" class="topRight_Menu">
+			<div> Dan Cabral
+			<div class="arrow-down"></div>
+			</div>
+		</div>
+		<div id="rightMenuSlide" class="topRight_Menu topRight_subMenu">
+			<ol>
+			  <li><a href="">Manage my account</a></li>
+			  <li><a href="">Notification</a></li>
+			  <li><a href="">Accessbility check</a></li>			  
+			  <li><a href="">My sites</a></li>
+			  <li><a href="">Support this site</a></li>
+			  <li class="li_separtor"></li>
+			  <li><a href="">Logout</a></li>
+			</ol>
+		</div>
 		<div id="container" class="container">
+			
 			<!-- Top Navigation -->
-			<iframe src="https://sociology.fas.harvard.edu/" width="100%" height="2000px"></iframe>
-
+			<iframe src="https://sociology.fas.harvard.edu/" width="100%" scrolling="no" height="3000px"></iframe>
 		</div><!-- /container -->
 		<div class="morph-button morph-button-sidebar morph-button-fixed">
 			<button type="button">
