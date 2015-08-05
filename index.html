@@ -249,7 +249,7 @@
 				margin-right:20px;
 				margin-top:2px;
 				color:white;
-				background:black;
+				background:#111;
 				z-index: 10;
 				width:160px;
 				display: inline-block;
@@ -259,26 +259,38 @@
 			}
 
 			.topRight_subMenu {
-				margin-top:25px;
+				margin-top:35px;
 				font-size: 13px;
 				display:none;
+				padding:0;
 			}
+			
+			.topRight_subMenu li {
+				padding:10px;
+				
+			}
+			
+			.slate {background:#6C7A89;}
+			
+			.alert {
+				padding: 0 4px;
+			}
+			
+			    
 
 			.arrow-down {
 				width: 0; 
 				height: 0; 
-				border-left: 10px solid transparent;
-				border-right: 10px solid transparent;				
-				border-top: 10px solid #fff;
+				border-left: 7px solid transparent;
+				border-right: 7px solid transparent;				
+				border-top: 7px solid #fff;
 				z-index: 10;
 				position: fixed;
 				display: inline-block;
 				margin-left:5px;
 				margin-top:3px;
 			}
-			li {
-				margin: 0.5em 0;
-			}
+			
 			.li_separtor {
 				content: "";
 				display: block;
@@ -299,25 +311,24 @@
 	</head>
 	<body height="3000px">
 		<div id="topRightMenu" class="topRight_Menu">
-			<div> Dan Cabral
+			<div> Dan Cabral &nbsp;<span class="slate alert">5</span>
 			<div class="arrow-down"></div>
 			</div>
 		</div>
 		<div id="rightMenuSlide" class="topRight_Menu topRight_subMenu">
-			<ol>
+			<ul>
 			  <li><a href="">Manage my account</a></li>
-			  <li><a href="">Notification</a></li>
-			  <li><a href="">Accessbility check</a></li>			  
+			  <li><a href="">Notification</a> <span class="slate alert">2</span></li>
+			  <li><a href="">Accessbility check</a> <span class="slate alert">3</span></li>			  
 			  <li><a href="">My sites</a></li>
 			  <li><a href="">Support this site</a></li>
-			  <li class="li_separtor"></li>
-			  <li><a href="">Logout</a></li>
-			</ol>
+			  <li class="slate"><a href="">Logout</a></li>
+			</ul>
 		</div>
 		<div id="container" class="container">
 			
 			<!-- Top Navigation -->
-			<iframe src="https://sociology.fas.harvard.edu/" width="100%" scrolling="no" height="3000px"></iframe>
+			<iframe src="http://sociology.fas.harvard.edu/" width="100%" scrolling="no" height="3000px"></iframe>
 		</div><!-- /container -->
 		<div class="morph-button morph-button-sidebar morph-button-fixed">
 			<button type="button">
