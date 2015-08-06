@@ -90,8 +90,8 @@
 			.pushed.container {
 				-webkit-transition-duration: 0.5s;
 				transition-duration: 0.5s;
-				-webkit-transform: translateX(225px);
-				transform: translateX(225px);
+				-webkit-transform: translateX(175px);
+				transform: translateX(175px);
 			}
 
 			/* MENU SPECIFIC */
@@ -108,7 +108,7 @@
 				box-sizing: border-box;
 			}
 			#cssmenu {
-				font-family: Raleway, sans-serif;
+				font-family: helvetica;
 				color: #ffffff;
 				margin-top: 25px;
 			}
@@ -122,7 +122,7 @@
 				float: right;
 			}
 			#cssmenu > ul > li > a {
-				padding: 16px 22px;
+				padding: 16px 15px;
 				cursor: pointer;
 				z-index: 2;
 				font-size: 16px;
@@ -182,7 +182,7 @@
 			}
 
 			#cssmenu ul ul li a, #cssmenu .heading {
-				padding: 14px 22px 14px 32px;
+				padding: 10px 18px 10px 20px;
 				cursor: pointer;
 				z-index: 2;
 				font-size: 14px;
@@ -195,7 +195,7 @@
 			}
 
 			#cssmenu .heading {
-				padding: 14px 22px;
+				padding: 14px 15px;
 				background: #444;
 			}
 
@@ -237,7 +237,6 @@
 			    height: 35px;
 			    background: #313338;
 			    color: #FFF;
-			    font-family: Raleway, sans-serif;
 			    padding: 9px;
 			}
 
@@ -246,14 +245,14 @@
 				top:0;
 				right:0;
 				padding:10px;
-				margin-right:20px;
+				margin-right:15px;
 				margin-top:2px;
 				color:white;
 				background:#111;
 				z-index: 10;
 				width:160px;
 				display: inline-block;
-				font-family: Raleway, sans-serif;
+				font-family: helvetica;
 				font-size: 14px;
 				cursor: pointer; 
 			}
@@ -271,6 +270,10 @@
 			}
 			
 			.slate {background:#6C7A89;}
+			
+			.slate.alert {background:#a23338;}
+			
+			
 			
 			.alert {
 				padding: 0 4px;
@@ -321,6 +324,7 @@
 			  <li><a href="">Notification</a> <span class="slate alert">2</span></li>
 			  <li><a href="">Accessbility check</a> <span class="slate alert">3</span></li>			  
 			  <li><a href="">My sites</a></li>
+			  <li><a href="">Add subsite</a></li>
 			  <li><a href="">Support this site</a></li>
 			  <li class="slate"><a href="">Logout</a></li>
 			</ul>
@@ -345,13 +349,13 @@
 								</li>
 
 								<li class='has-sub'>
-									<a href='#'>Content</a>
+									<a href='#'>Site Content</a>
 									<ul class='sub-menu'>
 										<li class="heading">
 											Browse
 										</li>
 										<li>
-											<a href='#'>Pages</a>
+											<a href='#'>Content</a>
 										</li>
 										<li>
 											<a href='#'>Files</a>
@@ -367,7 +371,10 @@
 											Add
 										</li>
 										<li>
-											<a href='#'>Page</a>
+											<a href='#'>Basic Page</a>
+										</li>
+										<li>
+											<a href='#'>Files</a>
 										</li>
 										<li>
 											<a href='#'>ContentType 2</a>
@@ -435,6 +442,9 @@
 										</li>
 									</ul>
 								</li>
+								
+								<li>
+									<a href='#'>Menus</a></li>
 								<li>
 									<a href='#'>Users &amp; Roles</a>
 								</li>
