@@ -122,7 +122,7 @@
 				float: right;
 			}
 			#cssmenu > ul > li > a {
-				padding: 16px 15px;
+				padding: 10px 15px;
 				cursor: pointer;
 				z-index: 2;
 				font-size: 16px;
@@ -195,7 +195,7 @@
 			}
 
 			#cssmenu .heading {
-				padding: 14px 15px;
+				padding: 10px 15px;
 				background: #444;
 			}
 
@@ -214,86 +214,85 @@
 				top: 20px;
 				background: #dddddd;
 			}
-			
+
 			/* Modals */
 			.modal {
-				position:absolute;
-				left:225px;
-				top:42px;
-				border:3px solid #8E8E8B;
-				background:#FFF;
-				display:none;
+				position: absolute;
+				left: 225px;
+				top: 42px;
+				border: 3px solid #8E8E8B;
+				background: #FFF;
+				display: none;
 			}
 			.modal.show {
-				display:block;
+				display: block;
 			}
-			
+
 			.modal-heading {
 				position: absolute;
-			    top: 0;
-	  		    left: 0;
-			    right: 0;
-			    width: 100%;
-			    height: 35px;
-			    background: #313338;
-			    color: #FFF;
-			    padding: 9px;
+				top: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				height: 35px;
+				background: #313338;
+				color: #FFF;
+				padding: 9px;
 			}
 
 			.topRight_Menu {
 				position: fixed;
-				top:0;
-				right:0;
-				padding:10px;
-				margin-right:15px;
-				margin-top:2px;
-				color:white;
-				background:#111;
+				top: 0;
+				right: 0;
+				padding: 10px;
+				margin-right: 15px;
+				margin-top: 2px;
+				color: white;
+				background: #999;
 				z-index: 10;
-				width:160px;
+				width: 160px;
 				display: inline-block;
 				font-family: helvetica;
 				font-size: 14px;
-				cursor: pointer; 
+				cursor: pointer;
 			}
 
 			.topRight_subMenu {
-				margin-top:35px;
+				margin-top: 35px;
 				font-size: 13px;
-				display:none;
-				padding:0;
+				display: none;
+				padding: 0;
 			}
-			
+
 			.topRight_subMenu li {
-				padding:10px;
-				
+				padding: 10px;
 			}
-			
-			.slate {background:#6C7A89;}
-			
-			.slate.alert {background:#a23338;}
-			
-			
-			
+
+			.slate {
+				background: #6C7A89;
+			}
+
+			.slate.alert {
+				background: #EF0812;
+			}
+
 			.alert {
 				padding: 0 4px;
 			}
-			
-			    
 
 			.arrow-down {
-				width: 0; 
-				height: 0; 
+				width: 0;
+				height: 0;
 				border-left: 7px solid transparent;
-				border-right: 7px solid transparent;				
+				border-right: 7px solid transparent;
 				border-top: 7px solid #fff;
 				z-index: 10;
 				position: fixed;
 				display: inline-block;
-				margin-left:5px;
-				margin-top:3px;
+				margin-left: 5px;
+				margin-top: 3px;
 			}
-			
+
 			.li_separtor {
 				content: "";
 				display: block;
@@ -303,8 +302,8 @@
 				margin-bottom: 5px;
 				background: #fff;
 			}
-			a { 
-				cursor: pointer; 
+			a {
+				cursor: pointer;
 				color: #fff;
 				text-decoration: none;
 			}
@@ -314,34 +313,51 @@
 	</head>
 	<body height="3000px">
 		<div id="topRightMenu" class="topRight_Menu">
-			<div> Dan Cabral &nbsp;<span class="slate alert">5</span>
-			<div class="arrow-down"></div>
+			<div>
+				Dan Cabral &nbsp;<span class="slate alert">5</span>
+				<div class="arrow-down"></div>
 			</div>
 		</div>
 		<div id="rightMenuSlide" class="topRight_Menu topRight_subMenu">
 			<ul>
-			  <li><a href="">Manage my account</a></li>
-			  <li><a href="">Notification</a> <span class="slate alert">2</span></li>
-			  <li><a href="">Accessbility check</a> <span class="slate alert">3</span></li>			  
-			  <li><a href="">My sites</a></li>
-			  <li><a href="">Add subsite</a></li>
-			  <li><a href="">Support this site</a></li>
-			  <li class="slate"><a href="">Logout</a></li>
+				<li>
+					<a href="">Manage my account</a>
+				</li>
+				<li>
+					<a href="">Notifications</a><span class="slate alert">2</span>
+				</li>
+				<li>
+					<a href="">Accessbility alerts</a><span class="slate alert">3</span>
+				</li>
+				<li>
+					<a href="">My sites</a>
+				</li>
+				<li>
+					<a href="">Add subsite</a>
+				</li>
+				<li>
+					<a href="">Support this site</a>
+				</li>
+				<li class="slate">
+					<a href="">Logout</a>
+				</li>
 			</ul>
 		</div>
 		<div id="container" class="container">
-			
+
 			<!-- Top Navigation -->
 			<iframe src="http://sociology.fas.harvard.edu/" width="100%" scrolling="no" height="3000px"></iframe>
 		</div><!-- /container -->
 		<div class="morph-button morph-button-sidebar morph-button-fixed">
 			<button type="button">
-				<span class="icon icon-cog">Settings Menu</span>
+				<img src="img/os-cp_button.png">
+				<!--<span class="icon icon-cog">Settings Menu</span>-->
 			</button>
 			<div class="morph-content">
 				<div>
 					<div class="content-style-sidebar">
-						<span class="icon icon-close">&#171; Close</span>
+						<span class="icon-close" style="color:#FFF;font-family:helvetica;background:url('img/close-arrow.png') no-repeat left center;width: 75px;">Close</span>
+						<!--<span class="icon icon-close">&#171; Close</span>-->
 						<div id='cssmenu'>
 							<ul>
 								<li>
@@ -385,10 +401,6 @@
 										<li>
 											<a href='#'>ContentType N</a>
 										</li>
-										<li>
-											<a href='#'>Add More +</a>
-										</li>
-
 										<li class="heading">
 											Import
 										</li>
@@ -407,7 +419,10 @@
 
 									</ul>
 								</li>
-
+								<li>
+									<a href='#'>Menus</a>
+								</li>
+								<li>
 								<li class='has-sub'>
 									<a href='#'>Appearance</a>
 									<ul class='sub-menu'>
@@ -417,20 +432,16 @@
 										<li>
 											<a href='#' class='layout'>Layout</a>
 										</li>
-										<li>
-											<a href='#'>Theme Settings</a>
-										</li>
+
 									</ul>
 								</li>
 								<li class='has-sub'>
 									<a href='#'>Settings</a>
 									<ul class='sub-menu'>
-										<li class="heading">
-											Apps
-										</li>
 										<li>
-											<a href='#' class='apps'>Browse</a>
+											<a href='#'>Apps</a>
 										</li>
+
 										<li>
 											<a href='#'>Publication Settings</a>
 										</li>
@@ -442,9 +453,6 @@
 										</li>
 									</ul>
 								</li>
-								
-								<li>
-									<a href='#'>Menus</a></li>
 								<li>
 									<a href='#'>Users &amp; Roles</a>
 								</li>
@@ -564,55 +572,52 @@
 					element.siblings('li').find('ul').slideUp(200);
 				}
 			});
-			
-			
-			$('a.apps').click(function () {
-               $('.apps-modal').toggleClass('show');
-            });
-            
-            
-            $('a.themes').click(function () {
-               $('.appearance-modal').toggleClass('show');
-            });
-            
-            $('a.layout').click(function () {
-               $('.layout-modal').toggleClass('show');
-            });
-            
-            //$('a.close-modal').click(function () {
-              // $('.apps-modal').removeClass('show');
-           // });
-			$("#topRightMenu").click(function(){
-				if($('#rightMenuSlide').css('display') == 'none')
-				{
+
+			$('a.apps').click(function() {
+				$('.apps-modal').toggleClass('show');
+			});
+
+			$('a.themes').click(function() {
+				$('.appearance-modal').toggleClass('show');
+			});
+
+			$('a.layout').click(function() {
+				$('.layout-modal').toggleClass('show');
+			});
+
+			//$('a.close-modal').click(function () {
+			// $('.apps-modal').removeClass('show');
+			// });
+			$("#topRightMenu").click(function() {
+				if ($('#rightMenuSlide').css('display') == 'none') {
 					$("#rightMenuSlide").slideDown();
-				}
-				else
-				{
+				} else {
 					$("#rightMenuSlide").slideUp();
 				}
 			});
 
 		</script>
-		
+
 		<div class="modal apps-modal">
-			<div class="modal-heading">Apps Here</div>
+			<div class="modal-heading">
+				Apps Here
+			</div>
 			<img src="img/screens/modal-apps-fw.png">
 		</div>
-		
+
 		<div class="modal appearance-modal">
-			<div class="modal-heading">Themes</div>
+			<div class="modal-heading">
+				Themes
+			</div>
 			<img src="img/screens/modal-appearance.png">
 		</div>
-		
-		
+
 		<div class="modal layout-modal">
-			<div class="modal-heading">Layout</div>
+			<div class="modal-heading">
+				Layout
+			</div>
 			<img src="img/screens/modal-layout.png">
 		</div>
-		
-		
-		
 
 	</body>
 </html>

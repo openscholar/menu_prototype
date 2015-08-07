@@ -41,12 +41,12 @@
 	content: "\e600";
 	
 }
-
+/*
 .icon-close::before {
 	content: "\e601";
 	  color: #FFF;
 }
-
+*/
 
 .icon-close {
 	position: absolute;
