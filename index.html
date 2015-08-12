@@ -246,7 +246,6 @@
 				right: 0;
 				padding: 10px;
 				margin-right: 15px;
-				margin-top: 2px;
 				color: white;
 				background: #999;
 				z-index: 10;
@@ -258,10 +257,11 @@
 			}
 
 			.topRight_subMenu {
-				margin-top: 35px;
+				margin-top: 34px;
 				font-size: 13px;
 				display: none;
 				padding: 0;
+				border-top: 1px solid #FFF;
 			}
 
 			.topRight_subMenu li {
@@ -293,19 +293,19 @@
 				margin-top: 3px;
 			}
 
-			.li_separtor {
-				content: "";
-				display: block;
-				height: 1px;
-				width: 100%;
-				margin-top: 8px;
-				margin-bottom: 5px;
-				background: #fff;
-			}
+			
 			a {
 				cursor: pointer;
 				color: #fff;
 				text-decoration: none;
+			}
+			
+			.close_panel {
+			position: absolute;
+    right: 35px;
+    top: 12px;
+    font-family: helvetica;
+    font-size: 1.1em;
 			}
 
 		</style>
@@ -324,10 +324,10 @@
 					<a href="">Manage my account</a>
 				</li>
 				<li>
-					<a href="">Notifications</a><span class="slate alert">2</span>
+					<a href="">Notifications</a> <span class="slate alert">2</span>
 				</li>
 				<li>
-					<a href="">Accessbility check</a><span class="slate alert">3</span>
+					<a href="">Accessbility check</a> <span class="slate alert">3</span>
 				</li>
 				<li>
 					<a href="">My sites</a>
@@ -353,8 +353,8 @@
 			<div class="morph-content">
 				<div>
 					<div class="content-style-sidebar">
-						<span class="icon-close" style="color:#FFF;font-family:helvetica;background:url('img/close-arrow.png') no-repeat left center;width: 75px;">Close</span>
-						<!--<span class="icon icon-close">&#171; Close</span>-->
+			
+						<div class="close_panel"><span style="color:#a39d9d;">O</span><span style="color:#df1f26;">S</span></div><span class="icon icon-close">&#171; Close</span>
 						<div id='cssmenu'>
 							<ul>
 								<li>
@@ -365,7 +365,7 @@
 									<a href='#'>Site Content</a>
 									<ul class='sub-menu'>
 										<li class="heading">
-											Find
+											Browse
 										</li>
 										<li>
 											<a href='#'>Content</a>
@@ -429,7 +429,9 @@
 										<li>
 											<a href='#' class='layout'>Layout</a>
 										</li>
-
+<li>
+											<a href='#' class='layout'>Theme Setting</a>
+										</li>
 									</ul>
 								</li>
 								<li class='has-sub'>
