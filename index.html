@@ -199,19 +199,27 @@
 				background: #444;
 			}
 
+			#cssmenu .heading.submenu {
+				padding: 0;
+			}
+
+			#cssmenu .heading a.submenu_heading {
+				background: #454545;
+			}
+
 			#cssmenu ul ul ul li a {
-				padding-left: 32px;
+				padding-left: 26px;
 			}
 			#cssmenu ul ul li a:hover {
 				color: #ffffff;
 			}
 			#cssmenu ul ul > li.has-sub > a:after {
-				top: 16px;
+				top: 14px;
 				right: 26px;
 				background: #dddddd;
 			}
 			#cssmenu ul ul > li.has-sub > a:before {
-				top: 20px;
+				top: 18px;
 				background: #dddddd;
 			}
 
@@ -293,19 +301,18 @@
 				margin-top: 3px;
 			}
 
-			
 			a {
 				cursor: pointer;
 				color: #fff;
 				text-decoration: none;
 			}
-			
+
 			.close_panel {
-			position: absolute;
-    right: 35px;
-    top: 12px;
-    font-family: helvetica;
-    font-size: 1.1em;
+				position: absolute;
+				right: 35px;
+				top: 12px;
+				font-family: helvetica;
+				font-size: 1.1em;
 			}
 
 		</style>
@@ -324,14 +331,14 @@
 					<a href="">Manage my account</a>
 				</li>
 				<li>
-					<a href="">Notifications</a> <span class="slate alert">2</span>
+					<a href="">Notifications</a><span class="slate alert">2</span>
 				</li>
 				<li>
-					<a href="">Accessbility check</a> <span class="slate alert">3</span>
+					<a href="">Accessbility check</a><span class="slate alert">3</span>
 				</li>
 				<li>
 					<a href="">My sites</a>
-				</li>				
+				</li>
 				<li>
 					<a href="">Support this site</a>
 				</li>
@@ -353,8 +360,10 @@
 			<div class="morph-content">
 				<div>
 					<div class="content-style-sidebar">
-			<a href="#" style="position:absolute;left:10px;top:7px;"><img src="img/home_button.png" width="25" height="25"></a>
-						<div class="close_panel"><span style="color:#a39d9d;">O</span><span style="color:#df1f26;">S</span></div><span class="icon icon-close">&#171; Close</span>
+						<a href="#" style="position:absolute;left:10px;top:7px;"><img src="img/home_button.png" width="25" height="25"></a>
+						<div class="close_panel">
+							<span style="color:#a39d9d;">O</span><span style="color:#df1f26;">S</span>
+						</div><span class="icon icon-close">&#171; Close</span>
 						<div id='cssmenu'>
 							<ul>
 								<li>
@@ -364,56 +373,61 @@
 								<li class='has-sub'>
 									<a href='#'>Site Content</a>
 									<ul class='sub-menu'>
-										<li class="heading">
-											Browse
-										</li>
-										<li>
-											<a href='#'>Content</a>
-										</li>
-										<li>
-											<a href='#'>Files</a>
-										</li>
-										<li>
-											<a href='#'>Widgets</a>
-										</li>
-										<li>
-											<a href='#'>Tagging</a>
-										</li>
-
-										<li class="heading">
-											Add
-										</li>
-										<li>
-											<a href='#'>Basic Page</a>
-										</li>
-										<li>
-											<a href='#'>Files</a>
-										</li>
-										<li>
-											<a href='#'>ContentType 2</a>
-										</li>
-										<li>
-											<a href='#'>ContentType 3</a>
-										</li>
-										<li>
-											<a href='#'>ContentType N</a>
-										</li>
-										<li class="heading">
-											Import
-										</li>
-										<li>
-											<a href='#'>Page</a>
-										</li>
-										<li>
-											<a href='#'>ContentType 2</a>
-										</li>
-										<li>
-											<a href='#'>ContentType 3</a>
-										</li>
-										<li>
-											<a href='#'>ContentType N</a>
+										<li class="heading has-sub submenu">
+											<a href='#' class="submenu_heading">Browse</a>
+											<ul>
+												<li>
+													<a href='#'>Content</a>
+												</li>
+												<li>
+													<a href='#'>Files</a>
+												</li>
+												<li>
+													<a href='#'>Widgets</a>
+												</li>
+												<li>
+													<a href='#'>Tagging</a>
+												</li>
+											</ul>
 										</li>
 
+										<li class="heading has-sub submenu">
+											<a href='#' class="submenu_heading">Add</a>
+											<ul>
+												<li>
+													<a href='#'>Basic Page</a>
+												</li>
+												<li>
+													<a href='#'>Files</a>
+												</li>
+												<li>
+													<a href='#'>ContentType 2</a>
+												</li>
+												<li>
+													<a href='#'>ContentType 3</a>
+												</li>
+												<li>
+													<a href='#'>ContentType N</a>
+												</li>
+											</ul>
+										</li>
+										<li class="heading has-sub submenu">
+											<a href='#' class="submenu_heading">Import</a>
+											<ul>
+												<li>
+													<a href='#'>Page</a>
+												</li>
+												<li>
+													<a href='#'>ContentType 2</a>
+												</li>
+												<li>
+													<a href='#'>ContentType 3</a>
+												</li>
+												<li>
+													<a href='#'>ContentType N</a>
+												</li>
+											</ul>
+										</li>
 									</ul>
 								</li>
 								<li>
@@ -429,7 +443,7 @@
 										<li>
 											<a href='#' class='layout'>Layout</a>
 										</li>
-<li>
+										<li>
 											<a href='#' class='layout'>Theme Settings</a>
 										</li>
 									</ul>
