@@ -75,19 +75,19 @@
 				position: relative;
 			}
 
-			.container {
+			.admin_panel {
 				width: 100%;
 				position: absolute;
 				-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
 				transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
 			}
 
-			.no-js .container {
+			.no-js .admin_panel {
 				width: calc(100% - 300px);
 				right: 0;
 			}
 
-			.pushed.container {
+			.pushed.admin_panel {
 				-webkit-transition-duration: 0.5s;
 				transition-duration: 0.5s;
 				-webkit-transform: translateX(175px);
@@ -347,11 +347,11 @@
 				</li>
 			</ul>
 		</div>
-		<div id="container" class="container">
+		<div id="admin_panel" class="admin_panel">
 
 			<!-- Top Navigation -->
 			<iframe src="http://sociology.fas.harvard.edu/" width="100%" scrolling="no" height="3000px"></iframe>
-		</div><!-- /container -->
+		</div><!-- /admin_panel -->
 		<div class="morph-button morph-button-sidebar morph-button-fixed">
 			<button type="button">
 				<img src="img/os-cp_button.png">
@@ -438,13 +438,13 @@
 									<a href='#'>Appearance</a>
 									<ul class='sub-menu'>
 										<li>
-											<a href='#' class='themes'>Themes</a>
+											<a href='#'>Themes</a>
 										</li>
 										<li>
-											<a href='#' class='layout'>Layout</a>
+											<a href='#'>Layout</a>
 										</li>
 										<li>
-											<a href='#' class='layout'>Theme Settings</a>
+											<a href='#'>Theme Settings</a>
 										</li>
 									</ul>
 								</li>
@@ -534,7 +534,7 @@
 		<script type="application/javascript" src="js/uiMorphingButton_fixed.js"></script>
 		<script>
 			(function() {
-				var docElem = window.document.documentElement, didScroll, scrollPosition, container = document.getElementById('container');
+				var docElem = window.document.documentElement, didScroll, scrollPosition, admin_panel = document.getElementById('admin_panel');
 
 				// trick to prevent scrolling when opening/closing button
 				function noScrollFn() {
@@ -581,8 +581,8 @@
 					onBeforeOpen : function() {
 						// don't allow to scroll
 						noScroll();
-						// push main container
-						classie.addClass(container, 'pushed');
+						// push main admin_panel
+						classie.addClass(admin_panel, 'pushed');
 					},
 					onAfterOpen : function() {
 						// can scroll again
@@ -595,8 +595,8 @@
 						classie.removeClass(el, 'scroll');
 						// don't allow to scroll
 						noScroll();
-						// push back main container
-						classie.removeClass(container, 'pushed');
+						// push back main admin_panel
+						classie.removeClass(admin_panel, 'pushed');
 					},
 					onAfterClose : function() {
 						// can scroll again
