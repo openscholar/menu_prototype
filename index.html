@@ -15,6 +15,8 @@
 			 v2.0 | 20110126
 			 License: none (public domain)
 			 */
+			 
+			 /*current*/
 
 			html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 				margin: 0;
@@ -75,19 +77,19 @@
 				position: relative;
 			}
 
-			.admin_panel {
+			.container {
 				width: 100%;
 				position: absolute;
 				-webkit-transition: -webkit-transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
 				transition: transform 0.5s cubic-bezier(0.7, 0, 0.3, 1) 0.1s;
 			}
 
-			.no-js .admin_panel {
+			.no-js .container {
 				width: calc(100% - 300px);
 				right: 0;
 			}
 
-			.pushed.admin_panel {
+			.pushed.container {
 				-webkit-transition-duration: 0.5s;
 				transition-duration: 0.5s;
 				-webkit-transform: translateX(175px);
@@ -198,28 +200,27 @@
 				padding: 10px 15px;
 				background: #444;
 			}
-
-			#cssmenu .heading.submenu {
+	        #cssmenu .heading.submenu {
 				padding: 0;
 			}
 
 			#cssmenu .heading a.submenu_heading {
 				background: #454545;
 			}
-
+			
 			#cssmenu ul ul ul li a {
-				padding-left: 26px;
+				padding-left: 32px;
 			}
 			#cssmenu ul ul li a:hover {
 				color: #ffffff;
 			}
 			#cssmenu ul ul > li.has-sub > a:after {
-				top: 14px;
+				top: 16px;
 				right: 26px;
 				background: #dddddd;
 			}
 			#cssmenu ul ul > li.has-sub > a:before {
-				top: 18px;
+				top: 20px;
 				background: #dddddd;
 			}
 
@@ -306,9 +307,9 @@
 				color: #fff;
 				text-decoration: none;
 			}
-
+			
 			.close_panel {
-				position: absolute;
+			 	position: absolute;
 				right: 35px;
 				top: 12px;
 				font-family: helvetica;
@@ -331,14 +332,12 @@
 					<a href="">Manage my account</a>
 				</li>
 				<li>
-					<a href="">Notifications</a><span class="slate alert">2</span>
+					<a href="">Notifications</a> <span class="slate alert">2</span>
 				</li>
-				<li>
-					<a href="">Accessbility check</a><span class="slate alert">3</span>
-				</li>
+			
 				<li>
 					<a href="">My sites</a>
-				</li>
+				</li>				
 				<li>
 					<a href="">Support this site</a>
 				</li>
@@ -347,11 +346,11 @@
 				</li>
 			</ul>
 		</div>
-		<div id="admin_panel" class="admin_panel">
+		<div id="container" class="container">
 
 			<!-- Top Navigation -->
 			<iframe src="http://sociology.fas.harvard.edu/" width="100%" scrolling="no" height="3000px"></iframe>
-		</div><!-- /admin_panel -->
+		</div><!-- /container -->
 		<div class="morph-button morph-button-sidebar morph-button-fixed">
 			<button type="button">
 				<img src="img/os-cp_button.png">
@@ -360,76 +359,123 @@
 			<div class="morph-content">
 				<div>
 					<div class="content-style-sidebar">
-						<a href="#" style="position:absolute;left:10px;top:7px;"><img src="img/home_button.png" width="25" height="25"></a>
+                        <a href="#" style="position:absolute;left:10px;top:7px;"><img src="img/home_button.png" width="25" height="25"></a>
 						<div class="close_panel">
 							<span style="color:#a39d9d;">O</span><span style="color:#df1f26;">S</span>
-						</div><span class="icon icon-close">&#171; Close</span>
-						<div id='cssmenu'>
+						</div><span class="icon icon-close">&#171; Close</span>						
+                        <div id='cssmenu'>
 							<ul>
 								<li>
 									&nbsp;
 								</li>
-
 								<li class='has-sub'>
 									<a href='#'>Site Content</a>
 									<ul class='sub-menu'>
 										<li class="heading has-sub submenu">
 											<a href='#' class="submenu_heading">Browse</a>
-											<ul>
-												<li>
-													<a href='#'>Content</a>
-												</li>
-												<li>
-													<a href='#'>Files</a>
-												</li>
-												<li>
-													<a href='#'>Widgets</a>
-												</li>
-												<li>
-													<a href='#'>Tagging</a>
-												</li>
-											</ul>
+                                            <ul>
+										<li>
+											<a href='#' class="findposts">Content</a>
 										</li>
+										<li>
+											<a href='#' class="findfiles">Files</a>
+										</li>
+										<li>
+											<a href='#' class="findwidgets">Widgets</a>
+										</li>
+										<li>
+											<a href='#'>Tagging</a>
+										</li>
+                                        </ul>
+                                        </li>
 
 										<li class="heading has-sub submenu">
 											<a href='#' class="submenu_heading">Add</a>
 											<ul>
-												<li>
-													<a href='#'>Basic Page</a>
-												</li>
-												<li>
-													<a href='#'>Files</a>
-												</li>
-												<li>
-													<a href='#'>ContentType 2</a>
-												</li>
-												<li>
-													<a href='#'>ContentType 3</a>
-												</li>
-												<li>
-													<a href='#'>ContentType N</a>
-												</li>
-											</ul>
+										<li>
+											<a href='#' class='addpage'>Basic Page</a>
 										</li>
+										<li>
+											<a href='#' class="createblog">Blog Post</a>
+										</li>
+										<li>
+											<a href='#' class="createbook">Book Page</a>
+										</li>
+                                        <li>
+											<a href='#' class="createclass">Class</a>
+										</li>
+										<li>
+											<a href='#' class="createevent">Event</a>
+										</li>
+										<li>
+											<a href='#' class="createfaq">FAQ</a>
+										</li>
+                                        <li>
+											<a href='#' class="createfeed">Feed</a>
+										</li>
+                                        <li>
+											<a href='#' class="createfeedimporter">Feed Importer</a>
+										</li>
+                                        <li>
+											<a href='#' class="createlink">Link</a>
+										</li>
+                                        <li>
+											<a href='#' class="createmediagallery">Media Gallery</a>
+										</li>
+                                        <li>
+											<a href='#' class="createnews">News</a>
+										</li>
+                                        <li>
+											<a href='#' class="createpresentation">Presentation</a>
+										</li>
+                                        <li>
+											<a href='#' class="createprofile">Profile</a>
+										</li>
+                                        <li>
+											<a href='#' class="createpublication">Publication</a>
+										</li>
+                                        <li>
+											<a href='#' class="createsoftware">Software Project</a>
+										</li>
+                                        </ul>
+                                        </li>
 										<li class="heading has-sub submenu">
 											<a href='#' class="submenu_heading">Import</a>
 											<ul>
-												<li>
-													<a href='#'>Page</a>
-												</li>
-												<li>
-													<a href='#'>ContentType 2</a>
-												</li>
-												<li>
-													<a href='#'>ContentType 3</a>
-												</li>
-												<li>
-													<a href='#'>ContentType N</a>
-												</li>
-											</ul>
+                                        <li>
+											<a href='#'>Basic Page</a>
+										</li>
+										<li>
+											<a href='#'>Blog</a>
+										</li>
+										<li>
+											<a href='#'>Class</a>
+										</li>
+                                        <li>
+											<a href='#'>Event</a>
+										</li>
+                                        <li>
+											<a href='#'>FAQ</a>
+										</li>
+										<li>
+											<a href='#'>News</a>
+										</li>
+                                        <li>
+											<a href='#'>Presentation</a>
+										</li>
+                                        <li>
+											<a href='#'>Profile</a>
+										</li>
+                                        <li>
+											<a href='#'>Publication</a>
+										</li>
+                                        <li>
+											<a href='#'>Software Project</a>
 										</li>
 									</ul>
 								</li>
+                                </ul>
+                                </li>
 								<li>
 									<a href='#'>Menus</a>
 								</li>
@@ -438,44 +484,70 @@
 									<a href='#'>Appearance</a>
 									<ul class='sub-menu'>
 										<li>
-											<a href='#'>Themes</a>
+											<a href='#' class='themes'>Themes</a>
 										</li>
 										<li>
-											<a href='#'>Layout</a>
+											<a href='#' class='layout'>Layout</a>
 										</li>
-										<li>
-											<a href='#'>Theme Settings</a>
-										</li>
+                                    
 									</ul>
 								</li>
 								<li class='has-sub'>
 									<a href='#'>Settings</a>
 									<ul class='sub-menu'>
 										<li>
-											<a href='#'>Apps</a>
+											<a href='#' class="apps">Apps</a>
+										</li>
+                                        <li>
+											<a href='#'>Blogs</a>
+										</li>
+                                        <li>
+											<a href='#'>Booklets</a>
+										</li>
+                                        <li>
+											<a href='#'>FAQs</a>
+										</li>
+                                        <li>
+											<a href='#'>Private Files</a>
+										</li>
+                                        <li>
+											<a href='#'>Profiles</a>
 										</li>
 										<li>
 											<a href='#'>Publications</a>
 										</li>
+                                        <li class="heading has-sub submenu">
+											<a href='#' class="submenu_heading">Third Party Integration</a>
+                                           <ul class="sub-menu">
 										<li>
-											<a href='#'>Blog</a>
+											<a href='#'>Google Analytics</a>
 										</li>
-										<li>
-											<a href='#'>Profiles</a>
+                                        <li> 
+                                        	<a href="#">Disqus</a>
+                                        </li>
+                                        <li>
+											<a href='#'>Mailchimp</a>
 										</li>
-										
-										<li>
-											<a href='#'>Private Files</a>
+                                        </ul>
+                                        <li class="heading has-sub submenu">
+											<a href='#' class="submenu_heading">Site Admin</a>
+                                           <ul class="sub-menu">
+                                        <li>
+											<a href='#'>Domain</a>
 										</li>
-										<li>
-											<a href='#'>FAQs</a>
+                                        <li>
+											<a href='#'>Site Privacy</a>
 										</li>
-										<li>
-											<a href='#'>Booklets</a>
+                                        <li>
+											<a href='#'>Cache & Search Index</a>
 										</li>
-										<li>
-											<a href='#'>Advanced</a>
+                                        <li>
+											<a href='#'>SEO</a>
 										</li>
+                                        <li>
+											<a href='#'>URL Redirects</a>
+										</li>
+                                        </ul>
 									</ul>
 								</li>
 								<li>
@@ -534,7 +606,7 @@
 		<script type="application/javascript" src="js/uiMorphingButton_fixed.js"></script>
 		<script>
 			(function() {
-				var docElem = window.document.documentElement, didScroll, scrollPosition, admin_panel = document.getElementById('admin_panel');
+				var docElem = window.document.documentElement, didScroll, scrollPosition, container = document.getElementById('container');
 
 				// trick to prevent scrolling when opening/closing button
 				function noScrollFn() {
@@ -581,8 +653,8 @@
 					onBeforeOpen : function() {
 						// don't allow to scroll
 						noScroll();
-						// push main admin_panel
-						classie.addClass(admin_panel, 'pushed');
+						// push main container
+						classie.addClass(container, 'pushed');
 					},
 					onAfterOpen : function() {
 						// can scroll again
@@ -595,8 +667,8 @@
 						classie.removeClass(el, 'scroll');
 						// don't allow to scroll
 						noScroll();
-						// push back main admin_panel
-						classie.removeClass(admin_panel, 'pushed');
+						// push back main container
+						classie.removeClass(container, 'pushed');
 					},
 					onAfterClose : function() {
 						// can scroll again
@@ -636,6 +708,57 @@
 			$('a.layout').click(function() {
 				$('.layout-modal').toggleClass('show');
 			});
+			$('a.addpage').click(function() {
+				$('.addpage-modal').toggleClass('show');
+			});
+			$('a.createblog').click(function() {
+				$('.createblog-modal').toggleClass('show');
+			});
+			$('a.createbook').click(function() {
+				$('.createbook-modal').toggleClass('show');
+			});
+			$('a.createclass').click(function() {
+				$('.createclass-modal').toggleClass('show');
+			});
+			$('a.createevent').click(function() {
+				$('.createevent-modal').toggleClass('show');
+			});
+			$('a.createfaq').click(function() {
+				$('.createfaq-modal').toggleClass('show');
+			});
+			$('a.createfeed').click(function() {
+				$('.createfeed-modal').toggleClass('show');
+			});
+			$('a.createfeedimporter').click(function() {
+				$('.createfeedimporter-modal').toggleClass('show');
+			});
+			$('a.createlink').click(function() {
+				$('.createlink-modal').toggleClass('show');
+			});
+			$('a.createmediagallery').click(function() {
+				$('.createmediagallery-modal').toggleClass('show');
+			});
+			$('a.createpresentation').click(function() {
+				$('.createpresentation-modal').toggleClass('show');
+			});
+			$('a.createprofile').click(function() {
+				$('.createprofile-modal').toggleClass('show');
+			});
+			$('a.createpublication').click(function() {
+				$('.createpublication-modal').toggleClass('show');
+			});
+			$('a.createsoftware').click(function() {
+				$('.createsoftware-modal').toggleClass('show');
+			});
+			$('a.findposts').click(function() {
+				$('.findposts-modal').toggleClass('show');
+			});
+			$('a.findfiles').click(function() {
+				$('.findfiles-modal').toggleClass('show');
+			});
+			$('a.findwidgets').click(function() {
+				$('.findwidgets-modal').toggleClass('show');
+			});
 
 			//$('a.close-modal').click(function () {
 			// $('.apps-modal').removeClass('show');
@@ -651,24 +774,130 @@
 		</script>
 
 		<div class="modal apps-modal">
-			<div class="modal-heading">
-				Apps Here
-			</div>
-			<img src="img/screens/modal-apps-fw.png">
+			<div class="modal-heading">Apps</div>
+			<img src="img/screens/modal-apps.fw.png">
 		</div>
 
 		<div class="modal appearance-modal">
-			<div class="modal-heading">
-				Themes
-			</div>
+			<div class="modal-heading">Themes</div>
 			<img src="img/screens/modal-appearance.png">
 		</div>
 
 		<div class="modal layout-modal">
-			<div class="modal-heading">
-				Layout
-			</div>
+			<div class="modal-heading">Layout</div>
 			<img src="img/screens/modal-layout.png">
+		</div>
+        
+        <div class="modal addpage-modal">
+			<div class="modal-heading">
+				Basic Page
+			</div>
+			<img src="img/screens/modal-create-basic-page.fw.png">
+		</div> 
+        <div class="modal createblog-modal">
+			<div class="modal-heading">
+				Blog Post
+			</div>
+			<img src="img/screens/modal-create-blog-entry.fw.png">
+		</div> 
+        <div class="modal createbook-modal">
+			<div class="modal-heading">
+				Book Page
+			</div>
+			<img src="img/screens/modal-create-book-page.fw.png">
+		</div>
+        <div class="modal createclass-modal">
+			<div class="modal-heading">
+				Class
+			</div>
+			<img src="img/screens/modal-create-class.fw.png">
+		</div>
+        <div class="modal createevent-modal">
+			<div class="modal-heading">
+				Event
+			</div>
+			<img src="img/screens/modal-create-event.fw.png">
+		</div>
+        <div class="modal createfaq-modal">
+			<div class="modal-heading">
+				FAQ
+			</div>
+			<img src="img/screens/modal-create-faq.fw.png">
+		</div>
+        <div class="modal createfeed-modal">
+			<div class="modal-heading">
+				Feed
+			</div>
+			<img src="img/screens/modal-create-feed.fw.png">
+		</div> 
+        <div class="modal createfeedimporter-modal">
+			<div class="modal-heading">
+				Feed Importer
+			</div>
+			<img src="img/screens/modal-create-feed-importer.fw.png">
+		</div>
+        <div class="modal createlink-modal">
+			<div class="modal-heading">
+				Link
+			</div>
+			<img src="img/screens/modal-create-link.fw.png">
+		</div> 
+        <div class="modal createmediagallery-modal">
+			<div class="modal-heading">
+				Media Gallery
+			</div>
+			<img src="img/screens/modal-create-media-gallery.fw.png">
+		</div> 
+        <div class="modal createnews-modal">
+			<div class="modal-heading">
+				News
+			</div>
+			<img src="img/screens/modal-create-news.fw.png">
+		</div>
+        <div class="modal createpresentation-modal">
+			<div class="modal-heading">
+				Presentation
+			</div>
+			<img src="img/screens/modal-create-presentation.fw.png">
+		</div>
+        <div class="modal createprofile-modal">
+			<div class="modal-heading">
+				Profile
+			</div>
+			<img src="img/screens/modal-create-person.fw.png">
+		</div>   
+        <div class="modal createpublication-modal">
+			<div class="modal-heading">
+				Publication
+			</div>
+			<img src="img/screens/modal-create-publication.fw.png">
+		</div>  
+        <div class="modal createsoftware-modal">
+			<div class="modal-heading">
+				Software
+			</div>
+			<img src="img/screens/modal-create-software.fw.png">
+		</div>
+        
+        <div class="modal findposts-modal">
+			<div class="modal-heading">
+				Content
+			</div>
+			<img src="img/screens/modal-findposts.fw.png">
+		</div>
+        
+        <div class="modal findfiles-modal">
+			<div class="modal-heading">
+				Files
+			</div>
+			<img src="img/screens/modal-findfiles.fw.png">
+		</div>
+        
+         <div class="modal findwidgets-modal">
+			<div class="modal-heading">
+				Widgets
+			</div>
+			<img src="img/screens/modal-find-widgets.fw.png">
 		</div>
 
 	</body>
